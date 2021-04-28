@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function AppTwo() {
+  return <h1>This is the second App</h1>
+}
+
+ReactDOM.render(
+  <React.Fragment>
+    <App />
+    <AppTwo />
+  </React.Fragment>,
+  document.getElementById('root')
+);
+
+// or just <></>
 
 
