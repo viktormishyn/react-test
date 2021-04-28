@@ -6,3 +6,10 @@ npx create-react-app react-essentials
 
 cd react-essentials
 npm start
+
+# babeljs.io
+
+# ReactDOM.render(<JSX>, document.getElementById('root'))
+
+
+
