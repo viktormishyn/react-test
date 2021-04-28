@@ -2,4 +2,7 @@ sudo snap install node --classic
 
 npx create-react-app react-essentials
 
+# react.new - CodeSandBox
 
+cd react-essentials
+npm start
