@@ -1,17 +1,16 @@
 import './App.css';
+import { useState } from "react"
 
-function SecretComponent() {
-  return <h1>Secret information for authorized users only</h1>
-}
-
-function RegularComponent() {
-  return <h1>Everyone can see this</h1>
-}
-
-function App({ authorized }) {
+function App() {
+  const [emotion, setEmotion] = useState("happy")
+  // useState returns an array, where first item (corresponds to the first argument) is our state variable
+  // and second is a function for updating the state
+  console.log(emotion)
   return (
     <>
-      {authorized ? <SecretComponent /> : <RegularComponent />}
+      <h1>Current emotion: {emotion}</h1>
+      <button onClick={() => setEmotion("frustrated")}>Frustrate</button>
+      <button onClick={() => setEmotion("happy")}>Happy</button>
     </>
   )
 }
