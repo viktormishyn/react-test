@@ -11,5 +11,7 @@ npm start
 
 # ReactDOM.render(<JSX>, document.getElementById('root'))
 
+npm install react-router@next react-router-dom@next
+
 
 
