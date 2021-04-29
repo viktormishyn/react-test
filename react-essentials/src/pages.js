@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, Outlet } from "react-router-dom"
 
 export function Home() {
     return (
@@ -18,6 +18,33 @@ export function About() {
     return (
         <div>
             <h1>[About]</h1>
+            <Outlet/>
+            {/* outlet allows us to use nested routes, f. e. '/about/services'  */}
+            {/* the content in this case will be displayed as a subsection along with parent component's content */}
+        </div>
+    )
+}
+
+export function Services() {
+    return (
+        <div>
+            <h2>Our Services</h2>
+        </div>
+    )
+}
+
+export function CompanyHistory() {
+    return (
+        <div>
+            <h2>Our History</h2>
+        </div>
+    )
+}
+
+export function Location() {
+    return (
+        <div>
+            <h2>Our Location</h2>
         </div>
     )
 }
