@@ -13,7 +13,11 @@ function App({ login }) {
   }, [])
 
   if (data) {
-    return <div>{JSON.stringify(data)}</div>
+    return (<div>
+      <h1>{data.name}</h1>
+      <p>{data.location}</p>
+      <img src={data.avatar_url} alt={data.login}/>
+    </div>)
   }
 
   return <div>No User Available</div>
