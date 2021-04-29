@@ -1,12 +1,14 @@
 import './App.css';
-import { useState } from "react"
+import { useReducer } from "react"
 
 function App() {
-  const [checked, setChecked] = useState(false)
-
-  function toggle() {
-    setChecked(checked => !checked)
-  }
+  const [checked, toggle] = useReducer(
+    (checked) => !checked,
+    false
+  )
+  // reducer takes in the current state and returns a new state.
+  // we can use useReducer instead of hardcoding such behavior intho onChange events
+  // first argument in useReducer hook - reducer function, second - initial state
 
   return (
     <>
